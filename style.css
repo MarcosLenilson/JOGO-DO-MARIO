@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(200, 243, 241);
+}
+
+.game-board{
+    width: 80%;
+    height: 700px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEE8, #E0F6FF);
+    
+}
+
+/*=============== Cenario ===============*/
+               /*TUBULAÇÃO*/
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 130px;
+    right: -80px;
+    animation: pipe-animation 2s infinite linear;
+    padding: 30px;
+    z-index: 10;
+}
+
+/*=============== Mario ===============*/
+
+.mario {
+    width: 189px;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    padding: 30px;
+   
+}
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+   
+    0% {
+        bottom: 0px;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+
+/*=============== Nuvens ===============*/
+
+.clouds-1{
+    position: absolute;
+    width: 540px;
+    padding-top: 50px;
+    z-index: 4;
+    right: -600px;
+    animation: clouds-1 40s infinite linear;
+}
+@keyframes clouds-1 {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+
+.clouds-2{
+    position: absolute;
+    width: 540px;
+    padding-top: 50px;
+    z-index: 4;
+    right: -600px;
+    animation: clouds-2 60s infinite linear;
+}
+@keyframes clouds-2 {
+    from{
+        right: -1300px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.clouds-3 {
+    position: absolute;
+    width: 150px;
+    padding-top: 300px;
+    z-index: 2;
+    right: -600px;
+    animation: clouds-3 75s infinite linear;
+}
+@keyframes clouds-3 {
+    from{
+        right: -250px;
+    }
+    to{
+        right: 100%;
+    }
+}
+.floor {
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0px;
+}
+.floor1{
+    position: absolute;  
+    z-index: 0;
+    animation: floor-1 2s infinite linear;
+   
+}
